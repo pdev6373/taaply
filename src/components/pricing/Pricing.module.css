@@ -1,0 +1,102 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pricings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 103px;
+  width: 100%;
+}
+
+.wrapper {
+  padding-inline: 6.6vw;
+  padding-bottom: 238px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 3.5em;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-bottom: 45px;
+}
+
+.heading {
+  font-size: 72px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #ff7627;
+  text-align: center;
+}
+
+.text {
+  max-width: 970px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.61);
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@media (max-width: 1440px) {
+  .wrapper {
+    padding-bottom: 100px;
+  }
+
+  .heading {
+    font-size: 56px;
+  }
+
+  .text {
+    font-size: 20px;
+    max-width: 700px;
+  }
+
+  .top {
+    gap: 18px;
+  }
+
+  .pricings {
+    gap: 70px;
+  }
+}
+
+@media (max-width: 950px) {
+  .heading {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 850px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .pricings {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .pricings {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 28px;
+  }
+}

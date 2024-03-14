@@ -1,0 +1,54 @@
+.wrapper {
+  padding-inline: 6.6vw;
+  padding-bottom: 238px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 3.5em;
+}
+
+.heading {
+  font-size: 72px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #ff7627;
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+  .wrapper {
+    padding-bottom: 100px;
+  }
+
+  .heading {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 950px) {
+  .heading {
+    font-size: 48px;
+    margin-bottom: 1.3em;
+  }
+}
+
+@media (max-width: 850px) {
+  .heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 32px;
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 28px;
+  }
+}
