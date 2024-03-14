@@ -1,9 +1,16 @@
 import hero from "../../assets/hero.png";
+import { Circle } from "..";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
     <section className={styles.wrapper}>
+      <Circle
+        color="rgba(255, 108, 25, .29)"
+        dimension="467px"
+        left={0}
+        bottom={0}
+      />
       <div className={styles.main}>
         <h2 className={styles.heading}>
           The Future of <span className={styles.headingAccent}>QR</span> Codes

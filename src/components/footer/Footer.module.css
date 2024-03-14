@@ -1,6 +1,6 @@
 .wrapper {
   background-color: rgba(255, 108, 25, 0.1);
-  padding-inline: 6.6vw;
+  padding-inline: max(6.6vw, 24px);
   padding-top: 97px;
   padding-bottom: 37px;
   display: flex;
@@ -55,6 +55,7 @@
 .socialIcons {
   display: flex;
   gap: 27px;
+  flex-wrap: wrap;
 }
 
 .socialWrapper {
@@ -90,15 +91,15 @@
   color: rgba(0, 0, 0, 0.61);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1720px) {
   .wrapper {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    gap: min(268px, 15vh);
+    padding-top: 48px;
+    padding-bottom: 24px;
+    gap: min(268px, 13vh);
   }
 
   .top {
-    gap: 120px;
+    gap: 110px;
   }
 
   .innerNavsWrapper {
@@ -110,7 +111,7 @@
   }
 
   .logo {
-    width: 120px;
+    width: 100px;
   }
 
   .text {
@@ -119,19 +120,19 @@
   }
 
   .socialIcons {
-    gap: 24px;
+    gap: 22px;
   }
 
   .socialWrapper {
-    width: 40px;
+    width: 36px;
   }
 
   .copyright {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .innerLink {
@@ -163,10 +164,6 @@
   .navs {
     gap: 90px;
   }
-
-  .copyright {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 500px) {
@@ -186,10 +183,6 @@
 
   .top {
     gap: 70px;
-  }
-
-  .copyright {
-    font-size: 14px;
   }
 }
 

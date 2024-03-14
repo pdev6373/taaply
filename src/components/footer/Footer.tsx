@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import dribbble from "../../assets/dribbble.svg";
 import instagram from "../../assets/instagram.svg";
 import facebook from "../../assets/facebook.svg";
@@ -33,7 +33,7 @@ const navs = [
     navs: [
       {
         name: "Blog",
-        route: "/#blog",
+        route: "https://taaply.com/blogs",
       },
       {
         name: "FAQ",

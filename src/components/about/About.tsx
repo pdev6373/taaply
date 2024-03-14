@@ -1,9 +1,10 @@
 import { Row } from "../../reusables";
 import about from "../../assets/about.png";
+import styles from "./About.module.css";
 
 export default function About() {
   return (
-    <section id="about">
+    <section id="about" className={styles.wrapper}>
       <Row
         topHeading="About"
         mainHeading="We specialize in emerging tech solutions"

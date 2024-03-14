@@ -1,7 +1,6 @@
 .wrapper {
   display: flex;
   align-items: center;
-  padding-inline: 6.6vw;
   margin-bottom: 150px;
 }
 
@@ -43,21 +42,22 @@
 
 .body {
   font-size: 24px;
+  line-height: 1.4;
   color: rgba(0, 0, 0, 0.61);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1720px) {
   .wrapper {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .topHeading {
-    font-size: 32px;
+    font-size: 26px;
     margin-bottom: 16px;
   }
 
   .mainHeading {
-    font-size: 48px;
+    font-size: 32px;
     max-width: 600px;
     margin-bottom: 24px;
   }
@@ -80,25 +80,28 @@
   }
 
   .topHeading {
-    font-size: 28px;
+    font-size: 24px;
+    text-align: center;
   }
 
   .mainHeading {
-    font-size: 32px;
+    font-size: 28px;
+    text-align: center;
   }
 
   .body {
     font-size: 18px;
+    text-align: center;
   }
 }
 
 @media (max-width: 500px) {
   .topHeading {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .mainHeading {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .body {

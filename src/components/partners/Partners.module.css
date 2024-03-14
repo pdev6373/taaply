@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 44px;
-  padding-inline: 6.6vw;
+  padding-inline: max(6.6vw, 24px);
   margin-bottom: 180px;
 }
 
@@ -25,13 +25,21 @@
   max-width: 220px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1720px) {
   .wrapper {
     margin-bottom: 120px;
   }
 
   .partners {
     gap: 60px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .partner {
+    max-width: 130px;
   }
 }
 
@@ -41,7 +49,7 @@
   }
 
   .partner {
-    max-width: 170px;
+    max-width: 110px;
   }
 
   .heading {
@@ -51,10 +59,10 @@
 
 @media (max-width: 500px) {
   .heading {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .partner {
-    max-width: 120px;
+    max-width: 90px;
   }
 }

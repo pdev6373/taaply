@@ -44,7 +44,7 @@
   border-radius: 13px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1720px) {
   .image {
     max-width: 300px;
   }
