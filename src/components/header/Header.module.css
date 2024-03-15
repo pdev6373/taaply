@@ -37,6 +37,19 @@
   font-weight: bold;
   text-decoration: none;
   margin-left: 60px;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.link:hover {
+  transition: opacity 0.3s !important;
+  opacity: 0.75 !important;
+}
+
+.linkActive {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
 }
 
 .button {

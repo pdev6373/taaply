@@ -68,6 +68,10 @@
   border-radius: 50%;
 }
 
+.socialWrapper:hover {
+  box-shadow: 0 14px 37px -10px #ff7627;
+}
+
 .copyright {
   text-align: center;
   font-size: 20px;

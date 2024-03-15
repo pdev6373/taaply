@@ -5,6 +5,7 @@ export type PricingType = {
   noOfServices: number;
   buttonText: string;
   link: string;
+  item?: any;
 };
 
 export type TestimonialType = {

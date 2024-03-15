@@ -31,8 +31,14 @@
   font-weight: 700;
 }
 
+.heading > *,
+.ib {
+  display: inline-block;
+}
+
 .headingAccent {
   color: #000;
+  position: relative;
 }
 
 .text {

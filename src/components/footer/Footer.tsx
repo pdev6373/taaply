@@ -4,6 +4,7 @@ import instagram from "../../assets/instagram.svg";
 import facebook from "../../assets/facebook.svg";
 import twitter from "../../assets/twitter.svg";
 import styles from "./Footer.module.css";
+import { motion } from "framer-motion";
 
 const socialIcons = [dribbble, instagram, facebook, twitter];
 const navs = [
@@ -37,7 +38,7 @@ const navs = [
       },
       {
         name: "FAQ",
-        route: "/#faq",
+        route: "https://taaply.com/faq",
       },
     ],
   },
@@ -46,11 +47,11 @@ const navs = [
     navs: [
       {
         name: "Contact",
-        route: "/#contact",
+        route: "https://taaply.com/contact_us",
       },
       {
         name: "Privacy",
-        route: "/#privacy",
+        route: "https://taaply.com/privacy_policy",
       },
     ],
   },
@@ -72,9 +73,16 @@ export default function Footer() {
 
           <div className={styles.socialIcons}>
             {socialIcons.map((icon, index) => (
-              <a href="#" className={styles.socialWrapper}>
+              <motion.a
+                whileHover={{
+                  scale: 1.2,
+                  rotate: 180,
+                }}
+                href="#"
+                className={styles.socialWrapper}
+              >
                 <img src={icon} alt="social icon" key={index} />
-              </a>
+              </motion.a>
             ))}
           </div>
         </div>

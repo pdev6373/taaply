@@ -2,7 +2,8 @@ import styles from "./Header.module.css";
 import logo from "../../assets/logo.png";
 import hamburger from "../../assets/hamburger.svg";
 import close from "../../assets/close.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Variants, motion } from "framer-motion";
 
 const navs = [
   {
@@ -23,35 +24,73 @@ const navs = [
   },
 ];
 
-export default function Header() {
+type HeaderType = {
+  stagger: Variants;
+  header: any;
+};
+
+export default function Header({ stagger, header }: HeaderType) {
   const [openSidenav, setOpenSidenav] = useState(false);
+  const [currentRoute, setCurrentRoute] = useState("");
+
+  useEffect(() => {
+    setCurrentRoute(window.location.hash);
+    window.addEventListener("popstate", () => {
+      setCurrentRoute(window.location.hash);
+    });
+  }, []);
+
+  console.log(currentRoute);
 
   const toggleSidenavHandler = (open: boolean) => setOpenSidenav(open);
 
   return (
     <>
-      <header className={styles.header}>
-        <img src={logo} alt="Logo" className={styles.logo} />
+      <motion.header variants={stagger} className={styles.header}>
+        <motion.img
+          src={logo}
+          alt="Logo"
+          className={styles.logo}
+          variants={header}
+        />
 
-        <nav className={styles.nav}>
+        <motion.nav className={styles.nav} variants={stagger}>
           <ul className={styles.list}>
-            {navs.map((nav) => (
-              <a href={nav.route} className={styles.link} key={nav.name}>
+            {navs.map((nav, index) => (
+              <motion.a
+                variants={header}
+                href={nav.route}
+                className={`${styles.link} ${
+                  currentRoute === nav.route.slice(1) ||
+                  (!index && currentRoute === "")
+                    ? styles.linkActive
+                    : ""
+                }`}
+                key={nav.name}
+              >
                 {nav.name}
-              </a>
+              </motion.a>
             ))}
           </ul>
 
-          <button className={styles.button}>Signup/Login</button>
-        </nav>
+          <motion.button
+            variants={header}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={styles.button}
+          >
+            Signup/Login
+          </motion.button>
+        </motion.nav>
 
-        <img
+        <motion.img
           src={hamburger}
           alt="hamburger menu"
           className={styles.hamburger}
           onClick={() => toggleSidenavHandler(true)}
+          variants={header}
         />
-      </header>
+      </motion.header>
 
       <nav
         className={`${styles.navMobile} ${

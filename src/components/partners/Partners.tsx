@@ -4,12 +4,13 @@ import google from "../../assets/google.png";
 import freedom from "../../assets/freedom.png";
 import mtn from "../../assets/mtn.png";
 import chivas from "../../assets/chivas.png";
+import { motion } from "framer-motion";
 
 const partners = [samsung, google, freedom, mtn, chivas];
 
 export default function Partners() {
   return (
-    <section className={styles.wrapper}>
+    <motion.section className={styles.wrapper}>
       <h3 className={styles.heading}>
         Some of our partners and companies we work with.
       </h3>
@@ -19,6 +20,6 @@ export default function Partners() {
           <img src={partner} alt="partner" className={styles.partner} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

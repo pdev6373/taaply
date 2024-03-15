@@ -4,6 +4,7 @@ import starter from "../../assets/starter.png";
 import advance from "../../assets/advance.png";
 import expert from "../../assets/expert.png";
 import styles from "./Pricing.module.css";
+import { motion, Variants } from "framer-motion";
 
 const pricings: PricingType[] = [
   {
@@ -32,9 +33,17 @@ const pricings: PricingType[] = [
   },
 ];
 
-export default function Pricing() {
+type PricingProps = {
+  item: Variants;
+};
+
+export default function Pricing({ item }: PricingProps) {
   return (
-    <section id="pricing" className={styles.wrapper}>
+    <motion.section
+      viewport={{ once: false }}
+      id="pricing"
+      className={styles.wrapper}
+    >
       <div className={styles.top}>
         <h3 className={styles.heading}>Pricing</h3>
         <p className={styles.text}>
@@ -44,7 +53,7 @@ export default function Pricing() {
         </p>
       </div>
 
-      <div className={styles.pricings}>
+      <motion.div className={styles.pricings}>
         {pricings.map((pricing, index) => (
           <Card
             img={pricing.img}
@@ -54,9 +63,10 @@ export default function Pricing() {
             buttonText={pricing.buttonText}
             link={pricing.link}
             key={index}
+            item={item}
           />
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

@@ -1,4 +1,5 @@
 import styles from "./Row.module.css";
+import { motion } from "framer-motion";
 
 type RowType = {
   img: string;
@@ -18,25 +19,43 @@ export default function Row({
   component,
 }: RowType) {
   return (
-    <div className={`${styles.wrapper} ${reverse ? styles.reverse : ""}`}>
+    <motion.div
+      className={`${styles.wrapper} ${reverse ? styles.reverse : ""}`}
+    >
       <div className={styles.main}>
         {topHeading ? (
-          <h3 className={styles.topHeading}>{topHeading}</h3>
+          <motion.h3
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, delay: 1.8 }}
+            className={styles.topHeading}
+          >
+            {topHeading}
+          </motion.h3>
         ) : (
           <></>
         )}
         {mainHeading ? (
-          <h2 className={styles.mainHeading}>{mainHeading}</h2>
+          <motion.h2
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className={styles.mainHeading}
+          >
+            {mainHeading}
+          </motion.h2>
         ) : (
           <></>
         )}
-        {body ? <p className={styles.body}>{body}</p> : <></>}
+        {body ? <motion.p className={styles.body}>{body}</motion.p> : <></>}
         {component ? component : <></>}
       </div>
 
       <div className={styles.imageWrapper}>
         <img src={img} alt="image" className={styles.image} />
       </div>
-    </div>
+    </motion.div>
   );
 }
