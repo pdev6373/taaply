@@ -73,7 +73,7 @@
 .navMobile {
   position: fixed;
   inset: 0;
-  height: 100vh;
+  height: 100dvh;
   background-color: #fff;
   padding-inline: max(6.6vw, 24px);
   padding-block: min(57px, 5vh);

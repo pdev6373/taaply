@@ -100,3 +100,24 @@
     margin-top: 10px;
   }
 }
+
+@media (max-width: 500px) {
+  .price {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .button {
+    font-size: 14px;
+    border: 1px solid #ff7627;
+    border-radius: 8px;
+  }
+
+  .wrapper {
+    border-radius: 10px;
+  }
+}
